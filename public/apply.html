@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CritPVP - Apply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col items-center py-12">
+    
+    <div class="w-full max-w-2xl px-6">
+        <button onclick="window.location.href='dashboard.html'" class="mb-8 text-sm text-gray-500 hover:text-black">← Back to Dashboard</button>
+        
+        <h1 id="appTitle" class="text-3xl font-bold mb-2 capitalize">Application</h1>
+        <p class="text-gray-500 mb-8">Please answer all questions honestly.</p>
+
+        <form id="appForm" onsubmit="submitApplication(event)" class="space-y-6">
+            <div id="questionsContainer"></div>
+            <button type="submit" class="w-full bg-black text-white p-4 rounded font-bold hover:bg-gray-800 transition-all">Submit Application</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>loadQuestions();</script>
+</body>
+</html>

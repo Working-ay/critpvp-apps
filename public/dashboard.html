@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CritPVP - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col items-center py-12">
+    
+    <div class="w-full max-w-4xl px-6">
+        <div class="flex justify-between items-center mb-12">
+            <h1 class="text-3xl font-bold tracking-tight">Dashboard</h1>
+            <button onclick="logout()" class="text-sm border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition-colors">Logout</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Staff Button -->
+            <button onclick="goToApply('staff')" class="h-40 border border-gray-200 rounded-lg flex flex-col items-center justify-center hover:border-black hover:bg-gray-50 transition-all duration-300 group">
+                <span class="font-bold text-lg group-hover:scale-105 transition-transform">Staff Application</span>
+                <span class="text-gray-400 text-sm mt-2">Apply to join the team</span>
+            </button>
+
+            <!-- Media Button -->
+            <button onclick="goToApply('media')" class="h-40 border border-gray-200 rounded-lg flex flex-col items-center justify-center hover:border-black hover:bg-gray-50 transition-all duration-300 group">
+                <span class="font-bold text-lg group-hover:scale-105 transition-transform">Media Application</span>
+                <span class="text-gray-400 text-sm mt-2">Content Creator Role</span>
+            </button>
+
+            <!-- Partner Button -->
+            <button onclick="goToApply('partner')" class="h-40 border border-gray-200 rounded-lg flex flex-col items-center justify-center hover:border-black hover:bg-gray-50 transition-all duration-300 group">
+                <span class="font-bold text-lg group-hover:scale-105 transition-transform">Partnership Program</span>
+                <span class="text-gray-400 text-sm mt-2">Partner with CritPVP</span>
+            </button>
+        </div>
+
+        <h2 class="text-xl font-bold mb-4">My Applications</h2>
+        <div id="statusList" class="space-y-4">
+            <!-- Application statuses load here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>loadMyApplications();</script>
+</body>
+</html>
